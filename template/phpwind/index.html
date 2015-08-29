@@ -1,0 +1,243 @@
+<link rel="stylesheet" type="text/css" href="wind-reset.css" />
+<link rel="stylesheet" type="text/css" href="template/phpwind/wind-reset.css" />
+<link rel="stylesheet" type="text/css" href="images/user/style.css" />
+<link rel="stylesheet" type="text/css" href="template/phpwind/images/user/style.css" />
+
+<div class="wrap">
+  <div class="o_topbar_wrap">
+    <div class="o_topbar">
+      <div class="cc"><a href="http://www.phpwind.net/index.php?m=o" class="logo">
+        <h1>phpwind</h1>
+        </a>
+        <ul class="o_nav">
+          <li id="o_KEYhome"><span><a href="mode.php?m=o&q=home" id="td_KEYhome">我的首页</a></span></li>
+          <li id="o_KEYuser"><span><a href="mode.php?m=o&q=user" id="td_KEYuser">个人空间</a></span></li>
+          <li id="o_KEYfriend"><span><a href="mode.php?m=o&q=friend" id="td_KEYfriend">朋友</a></span></li>
+          <li id="o_KEYbrowse"><span><a href="mode.php?m=o&q=browse" id="td_KEYbrowse">随便看看</a></span></li>
+        </ul>
+        <div class="login_info"> <a href="u.php?action=show"><b>zerolone</b></a> <a href="login.php?action=quit&verify=1eee824b">退出</a><i></i> <a href="message.php?type=newmsg" id="td_msg" class="meg" title="有新短消息" target="_blank">消息<span class="green">(3)</span></a> <a href="jobcenter.php" id="newjob" hidefocus="true" num="">任务<span class="green"></span></a> <a id="td_profile" href="profile.php" target="_blank">设置<span class="f9">▼</span></a><i></i> <a id="td_omainNav" href="http://www.phpwind.net">返回社区首页<span class="f9">▼</span></a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="menu_profile" style="display:none;">
+    <div class="o_top_menu" style="width:58px;">
+      <h4><a href="profile.php" target="_blank">设置<span class="f9" >▼</span></a></h4>
+      <ul>
+        <li><a href="profile.php?action=modify" target="_blank">帐号</a></li>
+        <li><a href="profile.php?action=privacy" target="_blank">隐私</a></li>
+        <li><a href="userpay.php" target="_blank">积分</a></li>
+        <li><a href="profile.php?action=permission" target="_blank">权限</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="header">
+    <div class="header cc">
+      <div class="fr search">
+        <form action="mode.php?m=o&q=friend&type=find&" method="post" onsubmit="return msg(this);">
+          <input type="hidden" name="step" value="2" />
+          <input type="hidden" name="accord" value="username" />
+          <input class="s-input" name="username" id="keyword" type="text" value="找人..." style="color:gray;" onfocus="if(getObj('keyword').value != ''){getObj('keyword').value = '';getObj('keyword').style.color='';}"/>
+          <span class="button" style="margin:0;"><span>
+          <button type="submit" id="sbb">搜索</button>
+          </span></span>
+        </form>
+      </div>
+    </div>
+    <div id="menu_omainNav" style="display:none;">
+      <div class="o_top_menu" style="width:106px;">
+        <h4><a href="http://www.phpwind.net">返回社区首页<span class="f9" >▼</span></a></h4>
+        <ul>
+          <li><a href="index-htm-m-area.html"><span>门户</span></a></li>
+          <li><a href="index-htm-m-bbs.html"><span>论坛</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+setCurrent('o_KEYuser','','current');
+function msg(obj) {
+var name = obj.username.value;
+if ( name == false || name == '找人...') {
+showDialog("error",'请输入用户名');
+return false;
+}
+return true;
+}
+</script> 
+  </div>
+  <div id="main">
+    <div id="menu-bar" class="menu-bar fl">
+      <div class="p10">
+        <div class="user_face"><img src="images/face/zhu.gif" border="0"></div>
+        <p class="tac"> </p>
+        <div class="o_hr_b"></div>
+        <div style="padding:5px 15px;line-height:22px;">
+          <ul class="cc">
+            <li><span id="statehtml"><img src="images/apps/operation/add.png" align="absmiddle" /> <a id="fri_icon" href="javascript:;" onclick="changeFriend('1','1090635','add');"><span id="friendstate">加为好友</span></a></span></li>
+            <li><img src="images/apps/operation/mail.png" align="absmiddle" /> <a style="cursor: pointer;" id="message" onclick="sendmsg('pw_ajax.php?action=msg&touid=1090635','','message')">发短消息</a></li>
+            <li><img src="images/apps/operation/share.png" align="absmiddle" /> <a style="cursor: pointer;" id="share" href="javascript:;" onclick="sendmsg('operate.php?action=share&ajax=1&type=user&id=1090635','',this.id);">分享用户</a></li>
+          </ul>
+        </div>
+        <script language="javascript">
+var friendcheck = '1';
+var pwModeImg = 'images/apps';
+function changeFriend(type,u,type2){
+if (type2 == 'add'){
+if (type == '1'){
+    sendmsg('pw_ajax.php?action=addfriend&touid='+u);
+} else {
+    ajax.send('mode.php?m=o&q=ajax&a=addfriend&u='+u,'',function(){var rText = ajax.request.responseText.split("|");if (rText[0] == 'success') {    getObj('statehtml').innerHTML = '<img align=\"absmiddle\" src=\"'+pwModeImg+'/operation/del.png\"/><a id=\"fri_icon\" style=\"cursor: pointer;\" onclick=\"changeFriend(\''+friendcheck+'\',\''+u+'\',\'del\');\"><span id=\"friendstate\">解除好友</span></a>';    showDialog('success','操作成功!',1);} else {    ajax.guide();}
+    });
+}
+} else {
+var friendstate = getObj('friendstate');
+pwConfirm('是否确认解除',friendstate,function(){
+    ajax.send('mode.php?m=o&q=ajax&a=delfriend&u='+u,'',function(){var rText = ajax.request.responseText.split("|");if (rText[0] == 'success') {    getObj('statehtml').innerHTML = '<img align=\"absmiddle\" style=\"margin-bottom: 1px;\" src=\"'+pwModeImg+'/operation/add.png\"/><a id=\"fri_icon\" style=\"cursor: pointer;\" onclick=\"changeFriend(\''+friendcheck+'\',\''+u+'\',\'add\');\"><span id=\"friendstate\">加为好友</span></a>';    showDialog('success','操作成功!',1);} else {    ajax.guide();}
+    });
+});
+}
+}
+</script>
+        <div class="o_hr_b"></div>
+        <div class="applied-list" style="padding:0 0 10px 5px;">
+          <ul style="_padding-top:5px;">
+            <li> <img src="images/apps/applied/record.png" align="absmiddle" /><a href="mode.php?m=o&space=1&u=1090635&q=write">记录</a> <span class="f9">(0)</span> </li>
+            <li> <img src="images/apps/applied/log.png" align="absmiddle" /><a href="mode.php?m=o&space=1&u=1090635&q=diary">日志</a> <span class="f9">(0)</span> </li>
+            <li> <img src="images/apps/applied/albums.png" align="absmiddle" /><a href="mode.php?m=o&space=1&u=1090635&q=photos">相册</a> <span class="f9">(0)</span> </li>
+            <li> <img src="images/apps/applied/share.png" align="absmiddle" /><a href="mode.php?m=o&space=1&u=1090635&q=share">分享</a> <span class="f9">(0)</span> </li>
+            <li> <span class="fr red">新</span> <img src="images/apps/applied/posts.png" align="absmiddle" /><a href="mode.php?m=o&space=1&u=1090635&q=article">帖子</a> <span class="f9">(20)</span> </li>
+            <li> <img src="images/apps/applied/groups.png" align="absmiddle" /><a href="mode.php?m=o&space=1&u=1090635&q=groups">群组</a> <span class="f9">(0)</span> </li>
+          </ul>
+        </div>
+        <h2 class="b mt10">个人积分</h2>
+        <div class="o_hr_b"></div>
+        <ul class="lh24" style="padding-left:10px;">
+          <li>综合积分:<span class="blue">18</span></li>
+          <li>威望:<span class="blue">0</span> <span class="gray">点</span></li>
+          <li>金钱:<span class="blue">189</span> <span class="gray">两</span></li>
+          <li>贡献值:<span class="blue">0</span> <span class="gray">点</span></li>
+          <li>交易币:<span class="blue">0</span> <span class="gray"></span></li>
+          <li>PW积分:<span class="blue gray2">0</span> <span class="gray">点</span></li>
+          <li>技术分:<span class="blue gray2">0</span> <span class="gray">分</span></li>
+          <li>团队工龄:<span class="blue gray2">0</span> <span class="gray">月</span></li>
+        </ul>
+      </div>
+    </div>
+    <script language="javascript">
+// JavaScript Document
+var imgMaxWidth=178; //control the pic's size
+var content = document.getElementById("menu-bar");
+M_USER_CTRL="ctrl+鼠标滚轮缩放";
+</script> 
+    <SCRIPT type="text/javascript" LANGUAGE="JavaScript" src="js/core/space.js"></SCRIPT>
+    <div id="content" class="fr">
+      <div id="sidebar" class="sidebar fr">
+        <div class="p10">
+          <h2 class="b">最近来访</h2>
+          <div class="o_hr"></div>
+          <div class="o-list-img">
+            <ul class="cc">
+              <li> <a href="u.php?uid=517107"><img src="images/face/none.gif" class="img-50 userCard" id="card_s1_517107_517107" /></a>
+                <p> <img src="images/online.png" align="absmiddle" title="在线" style="margin-top:2px;margin-left:-3px;" /> <a href="u.php?uid=517107" title="zerolone">zerolone</a></p>
+                <p>17:31</p>
+              </li>
+              <li> <a href="u.php?uid=967765"><img src="images/face/none.gif" class="img-50 userCard" id="card_s1_967765_967765" /></a>
+                <p> <a href="u.php?uid=967765" title="艾秦">艾秦</a></p>
+                <p>03-12</p>
+              </li>
+            </ul>
+          </div>
+          <h2 class="b">访问过</h2>
+          <div class="o_hr"></div>
+          <div class="o-list-img">
+            <div class="gray">暂时还没有访问记录</div>
+          </div>
+          <h2><span class="b">含笑流云的好友</span><span class="gray2">(共0人)</span></h2>
+          <div class="o_hr"></div>
+          <div class="o-list-img">
+            <div class="gray">暂没有好友</div>
+          </div>
+        </div>
+      </div>
+      <div id="content_main" class="fl" style="overflow:hidden;">
+        <table width="100%">
+          <tr class="vt">
+            <td height="800"><div class="p15">
+                <div class="cc p-info mb10"> <span class="fr gray"> <span title="2010-05-09 15:34">最近活跃：前天 15:34</span> </span>
+                  <h1><span class="blue"><strong class="f24">含笑流云</strong></span></h1>
+                </div>
+                <div class="bubbles_user">
+                  <div> <span></span> <a href="mode.php?m=o&space=1&u=1090635&q=write">查看历史记录...</a> </div>
+                </div>
+                <div class="mb10">
+                  <ul class="list-50 cc" >
+                    <li>生日 : 0000-00-00</li>
+                    <li>精华帖子 : 0</li>
+                    <li>平均日发帖： 0.02 (今日 : 0)</li>
+                    <li>Email : zx5912@tom.com</li>
+                    <li>在线时间 : 9</li>
+                    <li>注册时间 : 2007-03-07</li>
+                    <span style="display:none;" id="profile_more">
+                    <li>会员头衔:初来乍到</li>
+                    <li>最后登录 : 2010-05-09</li>
+                    <li>用户ID : 1090635</li>
+                    </span>
+                  </ul>
+                  <p class="tar"> <a style="cursor:pointer;" onclick="openMoreProfile();" id="moreprofile">详细</a> 
+                    <script language="JavaScript">
+function openMoreProfile(){
+if(getObj('profile_more').style.display == 'none'){
+getObj('profile_more').style.display = '';
+getObj('moreprofile').innerHTML = '隐藏';
+} else {
+getObj('profile_more').style.display = 'none';
+getObj('moreprofile').innerHTML = '详细';
+}
+}
+</script> </p>
+                </div>
+                <div class="title_one mt10 cc" style="padding:4px 0 4px 10px;"> <span class="fl tab_friends">我的动态</span>
+                  <ul class="fl o_tab_a">
+                    <li id="home_default"><a href="u.php?uid=1090635" hidefocus="true"><i>全部</i></a></li>
+                    <li id="home_write"><a href="mode.php?m=o&q=user&f_type=write&u=1090635" hidefocus="true"><i>记录</i></a></li>
+                    <li id="home_diary"><a href="mode.php?m=o&q=user&f_type=diary&u=1090635" hidefocus="true"><i>日志</i></a></li>
+                    <li id="home_photo"><a href="mode.php?m=o&q=user&f_type=photo&u=1090635" hidefocus="true"><i>相册</i></a></li>
+                    <li id="home_share"><a href="mode.php?m=o&q=user&f_type=share&u=1090635" hidefocus="true"><i>分享</i></a></li>
+                    <li id="home_post"><a href="mode.php?m=o&q=user&f_type=post&u=1090635" hidefocus="true"><i>帖子</i></a></li>
+                    <li id="home_friend"><a href="mode.php?m=o&q=user&f_type=friend&u=1090635" hidefocus="true"><i>好友</i></a></li>
+                    <li id="home_colony"><a href="mode.php?m=o&q=user&f_type=colony&u=1090635" hidefocus="true"><i>群组</i></a></li>
+                  </ul>
+                </div>
+                <div class="p10">
+                  <div class="dynamic-h cc">
+                    <div></div>
+                    <span>10-05-09</span></div>
+                  <div class="dynamic dynamic-home2">
+                    <dl class="cc">
+                      <dt> <img src="images/apps/icon/posts.png" class="img-20" /> </dt>
+                      <dd class="dd30"><a href="u.php?uid=1090635">含笑流云</a>发表了主题 <a href="http://www.phpwind.net/read.php?tid=1008856" target="_blank">我的论坛好几天都进不去了</a> </dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="title_one mt10"><b>留言板</b></div>
+                <div id="board_container" class="mt10">
+                  <div class="o-commnet">
+                    <div id="createboardbox"></div>
+                  </div>
+                </div>
+                <script language="JavaScript" src="js/app_comment.js"></script> 
+                <script language="JavaScript" src="mode/o/js/board.js"></script> </div></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script language="JavaScript">window.onReady(userCard.init);</script>
+    <div class="c"></div>
+  </div>
+  <!--.main-wrap,#main End-->
+  <div class="footer-wrap">
+    <div class="c"></div>
+    <div id="bottom"></div>
+    <center style="margin:5px 0;">
+    </center>
+  </div>
+</div>

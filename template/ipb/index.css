@@ -1,0 +1,93 @@
+body {font-family: Verdana;FONT-SIZE: 12px;MARGIN: 0;color: #000000;background: #ffffff;margin:20px; padding: 0px;}
+td {FONT-SIZE: 12px;}
+textarea,input,select{ font-family: Verdana;	font-size: 12px;	background-color: #ffffff;}
+div.quote{margin:5px 20px;border:1px solid #CCCCCC;padding:5px;background:#F3F3F3 ;line-height : normal;}
+a { TEXT-DECORATION: none;}
+a:hover{ text-decoration: underline;}
+img {border:0;}
+.banner{background: #84AACE;}
+.head { color: #FFFFFF;background: url(images/head.gif);padding: 5px;}
+.head a { color: #FFFFFF;}
+.f_one {background: #E4EAF2;}
+.f_two {background: #DFE6EF;}
+.hr  {border-top: 1px solid #003366; border-bottom: 0; border-left: 0; border-right: 0; }
+.t_one {background: #DFE6EF;}
+.t_two {background: #E4EAF2;}
+.r_one {background: #DFE6EF;}
+.r_two {background: #E4EAF2;}
+.cbg { color:#000000;background: url(images/bg.gif);}
+.cbg a{ color:#003366;}
+.smalltxt {font-family: Tahoma, Verdana; font-size: 12px;}
+.cfont { color:#FFFFFF; }
+.fnamecolor { color:#003366;}
+.index_font{ color: #003366;background: url(images/bg.gif);padding: 4px;}
+.index{ color: #ffffff;background: #8394B2;padding: 2px;font-size: 12px;}
+.tpc_title { font-size: 12px;font-weight:bold;}
+
+.tpc_content { font-size: 13px;}
+.i_table {BORDER: #003366 1px solid;background:#ffffff;}
+
+/* Logo */
+#logo   { background:url(images/logo.gif) no-repeat 0 0;	width:225px;	height:68px;cursor:hand;}
+#logobg { background:url(images/logobg.gif); height:68px;}
+
+/* 论坛首页 */
+.forumnew{  background:url(images/forum/new.gif) no-repeat 50% 50%;}
+.forumold{	background:url(images/forum/old.gif) no-repeat 50% 50%;}
+.forumnew, .forumold{	background-color:#E4EAF2;	cursor:hand;}
+.user{	background:url(images/user.gif) no-repeat 50% 50%;	background-color:#E4EAF2;}
+
+/* 公告列表 */
+.topicnotice1{  background:url(images/topic/notice1.gif)   no-repeat 50% 50%; background-color:#E4EAF2;}
+.topicnotice2{  background:url(images/topic/notice2.gif)   no-repeat 50% 50%; background-color:#E4EAF2;}
+
+/* 帖子列表 */
+.topictop1{ background:url(images/topic/top1.gif)  no-repeat 50% 50%;}
+.topictop2{	background:url(images/topic/top2.gif)  no-repeat 50% 50%;}
+.topictop3{	background:url(images/topic/top3.gif)  no-repeat 50% 50%;}
+.topicnew1{	background:url(images/topic/new1.gif)  no-repeat 50% 50%; width:18px; height:12px;}
+.topichot1{	background:url(images/topic/hot1.gif)  no-repeat 50% 50%; width:16px; height:13px;}
+.topicadd{  background:url(images/topic/img.gif)   no-repeat 50% 50%; width:21px; height:16px;}
+.topictop1, .topictop2, .topictop3, .topicnew1, .topichot1 ,.topicadd{background-color:#E4EAF2;}
+
+/* 贴子的4个状态 */
+.topicnew{  background:url(images/topic/new.gif)   no-repeat 50% 50%;}
+.topic{     background:url(images/topic/topic.gif) no-repeat 50% 50%;}
+.topichot{  background:url(images/topic/hot.gif)   no-repeat 50% 50%;}
+.topiclock{ background:url(images/topic/lock.gif)  no-repeat 50% 50%;}
+.topicnew, .topic, .topichot, .topiclock{ background-color:#E4EAF2; width:19px; height:22px;cursor:hand;}
+
+/* 发帖，回帖 */
+#td_post,#td_reply{	width:89px;	height:27px;}
+#td_post{	background:url(images/topic/post.gif)}
+#td_reply{background:url(images/topic/reply.gif)}
+
+/* 资料 短信 编辑 QQ 签名 回顶 */
+#td_profile{background:url(images/read/profile.gif)}
+#td_message{background:url(images/read/message.gif)}
+#td_edit   {background:url(images/read/edit.gif)}
+#td_qq     {background:url(images/read/qq.gif)}
+#td_top    {background:url(images/read/top.gif);width:87px;height:21px;}
+#td_profile, #td_message, #td_edit, #td_qq{	width:59px;	height:21px;}
+
+/* 发帖表情 */
+#e1, #e2, #e3, #e4, #e5, #e6, #e7{width:19px;height:19px;}
+#e1{background:url(images/emotion/1.gif);}
+#e2{background:url(images/emotion/2.gif);}
+#e3{background:url(images/emotion/3.gif);}
+#e4{background:url(images/emotion/4.gif);}
+#e5{background:url(images/emotion/5.gif);}
+#e6{background:url(images/emotion/6.gif);}
+#e7{background:url(images/emotion/7.gif);}
+
+/* 建议编辑器 */
+#edb, #edi, #edu, #edc, #edcode, #edimg, #edq, #edurl{width:23px;height:22px;cursor:hand;}
+#edb{background:url(images/editor/b.gif);}
+#edi{background:url(images/editor/i.gif);}
+#edu{background:url(images/editor/u.gif);}
+#edc{background:url(images/editor/c.gif);}
+#edcode{background:url(images/editor/code.gif);}
+#edimg{background:url(images/editor/img.gif);}
+#edq{background:url(images/editor/q.gif);}
+#edurl{background:url(images/editor/url.gif);}
+

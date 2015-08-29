@@ -1,0 +1,130 @@
+<html>
+
+<head>
+<script>
+function switchCell(n, hash) {
+	nc=document.getElementsByName("navcell");
+	if(nc){
+		t=document.getElementsByName("tb")
+		for(i=0;i<nc.length;i++){
+			nc.item(i).className="tab-off";
+			t.item(i).className="hide-table";
+		}
+		nc.item(n-1).className="tab-on";
+		t.item(n-1).className="show-table";
+	}else if(navcell){
+		for(i=0;i<navcell.length;i++){
+			navcell[i].className="tab-off";
+			tb[i].className="hide-table";
+		}
+		navcell[n-1].className="tab-on";
+		tb[n-1].className="show-table";
+	}
+	if(hash){
+		document.location="#"+hash;
+	}
+}
+</script>
+<SCRIPT event=onclick for=Ok language=JavaScript>
+  window.returnValue = "Flash*" + path.value+"*"+selrow.value+"*"+selcol.value;
+  window.close();
+</SCRIPT>
+
+<SCRIPT event=onclick for=Ok2 language=JavaScript>
+  window.returnValue = "MediaPlayer*" + path2.value+"*"+selrow2.value+"*"+selcol2.value;
+  window.close();
+</SCRIPT>
+
+<SCRIPT event=onclick for=Ok3 language=JavaScript>
+  window.returnValue = "RealPlayer*" + path3.value+"*"+selrow3.value+"*"+selcol3.value;
+  window.close();
+</SCRIPT>
+
+<link href="/Css/Manage.Css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<table cellspacing="0" cellpadding="0" width="490" border="0">
+	<tr>
+		<td class="tab-on" id="navcell" onClick="switchCell(1)" name="navcell" width="140" height="30" style="font-size: 12pt; font-weight:bold">
+&nbsp;插入Flash</td>
+		<td class="tab-off" id="navcell" onClick="switchCell(2)" name="navcell" width="160" style="font-size: 12pt; font-weight:bold">
+&nbsp;插入Media Player</td>
+		<td class="tab-off" id="navcell" onClick="switchCell(3)" name="navcell" width="160" style="font-size: 12pt; font-weight:bold">
+&nbsp;插入Real player</td>
+		<td width="*">&nbsp;
+ </td>
+	</tr>
+</table>
+<table id="tb" cellspacing="0" cellpadding="0" width="490" border="0" name="tb" style="border: 1px solid #C0C0C0">
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="22">&nbsp;&nbsp;｜Swf｜</td>
+			</tr>
+			<tr>
+				<td height="22">&nbsp;&nbsp;地址：<INPUT id=path size=35 value="http://" name="T1" class="InputBox"></td>
+			</tr>
+			<tr>
+				<td height="22">&nbsp;&nbsp;宽度：<INPUT id=selrow value=500 size=12 maxlength="4" name="T2" class="InputBox"> &nbsp;&nbsp;高度：<INPUT id=selcol value=300 size=12 maxlength="4" name="T3" class="InputBox"></td>
+			</tr>
+			<tr>
+				<td height="35">
+				<p align="center"><input type="submit" value=" 确 定 " id="Ok" class="InputBox">&nbsp; <input type="button" value=" 取 消 " onClick="window.close();" class="InputBox"></p>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+<table id="tb" cellspacing="0" cellpadding="0" width="490" border="0" name="tb" class="hide-table" style="border: 1px solid #C0C0C0">
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="22">&nbsp;&nbsp;｜Avi｜Wmv｜Wma｜Mpg｜</td>
+			</tr>
+			<tr>
+				<td height="22">&nbsp;&nbsp;地址：<INPUT id=path2 size=35 value="http://" name="T1" class="InputBox"></td>
+			</tr>
+			<tr>
+				<td height="22">&nbsp;&nbsp;宽度：<INPUT id=selrow2 value=500 size=12 maxlength="4" name="T2" class="InputBox"> &nbsp;&nbsp;高度：<INPUT id=selcol2 value=300 size=12 maxlength="4" name="T3" class="InputBox"></td>
+			</tr>
+			<tr>
+				<td height="35">
+				<p align="center"><input type="submit" value=" 确 定 " id="Ok2" class="InputBox">&nbsp; <input type="button" value=" 取 消 " onClick="window.close();" class="InputBox"></p>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+<table id="tb" cellspacing="0" cellpadding="0" width="490" border="0" name="tb" class="hide-table" style="border: 1px solid #C0C0C0">
+	<tr>
+		<td>
+		<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="22">&nbsp;&nbsp;｜Rm｜Ra｜Ram｜</td>
+			</tr>
+			<tr>
+				<td height="22">&nbsp;&nbsp;地址：<INPUT id=path3 size=35 value="http://" name="T1" class="InputBox"></td>
+			</tr>
+			<tr>
+				<td height="22">&nbsp;&nbsp;宽度：<INPUT id=selrow3 value=500 size=12 maxlength="4" name="T2" class="InputBox"> &nbsp;&nbsp;高度：<INPUT id=selcol3 value=300 size=12 maxlength="4" name="T3" class="InputBox"></td>
+			</tr>
+			<tr>
+				<td height="35">
+				<p align="center"><input type="submit" value=" 确 定 " id="Ok3" class="InputBox">&nbsp; <input type="button" value=" 取 消 " onClick="window.close();" class="InputBox"></p>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>　
+</body>
+
+</html>

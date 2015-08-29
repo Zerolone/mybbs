@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>条目列表</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8 ">
+<link href="../css/manage.css" type=text/css rel=stylesheet>
+<meta content="MSHTML 6.00.2900.2180" name=GENERATOR>
+</head>
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+<script language="JavaScript" src="../js/all.js"></script>
+<script language="JavaScript">
+function goto(pagenum)
+{
+	article_list_frm.pagenum.value	= pagenum;
+//	alert(pagenum);
+	article_list_frm.submit();
+}
+</script>
+  <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+    <tr height="26">
+      <td height="26" colspan="5" bgcolor="#666666"><b><font color="#FFFFFF">&nbsp;置顶项目列表</font></b></td>
+    </tr>
+    <tr valign=center align=middle>
+      <td width="40" bgcolor=#999999 height=20><p><font color="#FFFFFF">顺序</font></p></td>
+      <td width="*" bgcolor=#999999><font color="#FFFFFF">标题</font></td>
+      <td width="80" bgcolor=#999999><font color="#FFFFFF"> 地址</font></td>
+      <td width="40" bgcolor=#999999><font color="#FFFFFF">删除</font></td>
+    </tr>
+  <form name="form1" action="article_top_action.php" method="post">
+		<?php
+			if(isset($article_list))
+			{
+				foreach ($article_list as $article)
+				{
+		?>
+    <tr <?=$article['trbgcolor']?>>
+			<input type="hidden" name="id[]" value="<?=$article['id']?>">
+      <td>&nbsp;<select name="order[]" class="inputbox">
+          <option value="<?=$article['order']?>"><?=$article['order']?></option>
+					<?php
+						foreach ($order_list as $order)
+						{
+					?>
+          <option value="<?=$order['order']?>"><?=$order['order']?></option>
+					<?php
+						}
+					?>
+        </select>      </td>
+      <td>&nbsp;<a href="../<?=$article['url']?>" target="_blank"><?=encode($article['title'])?></a></td>
+			<td>&nbsp;<?=$article['url']?></td>
+      <td><input name="del[]" type="checkbox" id="del<?=$article['id']?>" value="<?=$article['id']?>"><label for="del<?=$article['id']?>">删除</label></td>
+    </tr>
+    <?php
+				}
+		}	
+		?>
+    <tr>
+      <td valign=bottom bgcolor=#FFFFFF height=20 colspan="5" align=right>
+	      <input type="hidden" name="pagenum" value="<?=$pagenum?>">
+        <input name="s_list_order" type="submit" class="inputbox" value="修改顺序">
+         <input type="button" class="inputbox" onclick='selectalldel()' value="全选删除">
+        <input name="s_list_del" type="submit" class="inputbox" onClick="return confirm('你真的要删除所选信息？！');" value="删除">
+        <input type="reset" class="inputbox" value="全不选">			</td>
+    </TR>
+  	</form>
+		<tr height="22" valign="bottom">
+    <td colspan="5" width="100%" align="right">
+		<form method="get" action="" style="MARGIN-BOTTOM:0px" name="article_list_frm">
+       <input type="hidden" name="pagenum" value="<?=$pagenum?>">
+			<a href="javascript:goto('1');" title="第一页"><b>|&lt;</b></a>  <a href="javascript:goto('<?=$pagenum_up?>');" title="上一页"><b>&lt;</b></a> 
+			<?
+			if(isset($beginlist))
+			{
+			foreach ($beginlist as $begin)
+			{
+			?>
+			<a href="javascript:goto('<?=$begin[0]?>');" title="第<?=$begin[0]?>页">[<?=$begin[0]?>]</a>
+			<?
+			}
+			}
+			?> [<font color="red"><?=$pagenum?></font>] 
+			<?
+			if(isset($endlist))
+			{
+			foreach ($endlist as $end)
+			{
+			?>
+			<a href="javascript:goto('<?=$end[0]?>');" title="第<?=$end[0]?>页">[<?=$end[0]?>]</a>
+			<?
+			}
+			}
+			?>
+			<a href="javascript:goto('<?=$pagenum_down?>');" title="下一页"><b>&gt;</b></a> <a href="javascript:goto('<?=$pagend?>');" title="第<?=$pagend?>页"><b>&gt;|</b></a>&nbsp;
+					<strong><font color=red><?=$pagenum?></font>/<?=$pagecount?></strong>页&nbsp;<b><font color="#FF0000"><?=$recordcount?></font></b>条记录&nbsp;<b><?=$pagesize?></b>条/页&nbsp;
+			转到：
+			<input type="text" name="pagenum1" size=2 maxlength=10 class="InputBox" value=""> <input class="inputbox" type="submit"  value="Go"  name="cndok">
+</form>			</td>
+	</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,303 @@
+a:link{
+	color:#190552;
+	text-decoration:none	}
+a:active{
+	color:#190552;
+	text-decoration:none	}
+a:visited{
+	color:#29098A;
+	text-decoration:none	}
+a:hover{
+	color:#29098A;
+	text-decoration:underline	}
+*{
+	font-size: 12px;
+}
+body{
+	margin: 0px;
+}
+td{
+	white-space: nowrap;
+}
+.wintitle{
+	position:relative;
+	left:-10px;
+	z-index:0;
+	/*
+	background: url("../images/tab1.gif");
+	*/
+	background-repeat: no-repeat;
+	width:150px;
+	height:25px;
+	padding-left:10px;
+	padding-top:4px;
+	cursor:default;
+}
+.win{
+	position:absolute;
+	width:100%;
+	height:100%;
+	left: 1px;
+	top: 19px;
+}
+.menuaa{
+	position: absolute;
+	width: 100px;
+	height: 10px;
+	left=10;
+	z-index: 1;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	display: none;
+	background-color:#F9F8F7	}
+.link{
+	color: #000000;
+	text-decoration: none;
+	CURSOR: default;
+}
+.menuitem{
+	position: absolute;
+	display: none;
+	top: 0px;
+	border-left: 1px #666666 solid;
+	border-bottom: 1px #666666 solid;
+	cursor: default;
+	filter:progid:dximagetransform.microsoft.dropshadow(color=#DDDDDD ,offx=3,offy=3,positive=true)	}
+.menu
+{
+	PADDING-LEFT:4px;
+	PADDING-RIGHT:4px;
+	CURSOR:default	}
+.menuover
+{
+	PADDING-LEFT:3px;
+	PADDING-RIGHT:3px;
+	BACKGROUND-COLOR:#B5BED6;
+	BORDER:1px solid #08246B;
+	CURSOR:default	}
+.menutop
+{
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+	border-bottom-width: 1px	}
+.menutopleft
+{
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom: 1px solid #000000	}
+.menubottom
+{
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-top-width: 1px;
+	border-bottom: 1px solid #000000	}
+.tdin
+{
+	background-color:#F1F1F1;
+	color:#FF0000;
+	padding:1px;
+	cursor:hand;
+}
+.inputbox{
+	border-style: solid;
+	border-width: 1px	}
+
+.inputboxgreen{
+	border-style: solid;
+	border-width: 1px	;
+	border-color:green;
+}
+
+.inputboxred{
+	border-style: solid;
+	border-width: 1px	;
+	border-color:red;
+}
+
+.tab-on
+{
+	border-style: solid;
+	border-width: 1px;
+	background-color: #FFFFFF;
+	CURSOR: pointer;
+}
+.tab-off
+{
+	border-style: solid;
+	border-width: 1px;
+	background-color: #f6f6f6;
+	CURSOR: pointer;
+}
+.hide-table
+{
+	DISPLAY: none	}
+.show-table
+{
+	DISPLAY: block	}
+body
+{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.cal
+{
+	border:1px solid #196AB2;
+	width:254px;
+	_width:240px;
+	position:absolute;
+	padding:0 5px;
+	font-family:Arial;
+	background:#DEF0F9;
+}
+.cal a,.cal b
+{
+	display:block;
+	float:left;
+	zoom: 1;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	padding:2px;
+	background:#DEF0F9;
+	font-size:12px;
+	text-align:center;
+	color:#1668B1;
+	font-family:Arial;
+	text-decoration:none;
+	margin:0px 2px;
+}
+.cal b
+{
+	background:none ;
+}
+.cal a:hover
+{
+	background:#A9DAF3;
+	color:#900;
+	font-weight:bold
+}
+.cal .btn
+{
+	cursor:pointer;
+	color:#fff;
+}
+.cal .dateCap
+{
+	width:100px;
+	_width:92px;
+	color:#fff;
+}
+.cal2
+{
+	border:1px solid #1F62BE;
+	width:210px;
+	_width:190px;
+	position:absolute;
+	font-family:Arial;
+	background:#F0F9FF;
+	left:-500px;
+	overflow:hidden;
+}
+.cal2 a,.cal2 b
+{
+	display:block;
+	float:left;
+	zoom: 1;
+	width:20px;
+	height:16px;
+	line-height:16px;
+	padding:2px;
+	background:#F0F9FF;
+	font-size:12px;
+	text-align:center;
+	color:#333;
+	font-family:Arial;
+	text-decoration:none;
+	margin:0px 2px;
+}
+.cal2 b
+{
+	background:none;
+}
+.cal2 a:hover
+{
+	background:#FE8B1A;
+	color:#fff;
+	font-weight:bold
+}
+.cal2 .btn
+{
+	cursor:pointer;
+	width:18px;
+}
+.cal2 .dateCap{
+	width:80px;
+	color:#900;
+}
+
+/* 表格 */
+
+.sortme{
+	cursor:move;
+	border:1px solid #999;
+
+	width:100%;
+	border-style:solid;
+	border-width:1px;
+	margin:0;
+}
+
+div{
+	float:left;
+	border-left:	1px solid #999999; 
+	width:5%;
+	padding:1px;
+}
+
+.csstb{
+	width:100%;
+	border-style:solid;
+	border-width:1px;
+	margin:0;
+}
+
+.head{
+	background:#999999;
+}
+
+.divdrag{
+	width:100%;
+	border:0px;
+}
+
+.div10{	width:10%;}
+.div20{	width:20%;}
+.div30{	width:30%;}
+.div40{	width:40%;}
+.div50{	width:50%;}
+.div60{	width:60%;}
+.div70{	width:70%;}
+.div80{	width:80%;}
+.div90{	width:90%;}
+.div100{width:100%;}
+
+.div15{	width:15%;}
+.div25{	width:25%;}
+.div35{	width:30%;}
+.div45{	width:40%;}
+.div55{	width:50%;}
+.div65{	width:60%;}
+.div75{	width:70%;}
+.div85{	width:80%;}
+.div95{	width:90%;}
+
+/* 提示信息 */
+#message	{ display:none; width:150px; text-align:center; padding:5px 8px; font-weight:bold; position:absolute; right:0%; font:12px arial; }

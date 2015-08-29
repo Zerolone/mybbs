@@ -1,0 +1,320 @@
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:42 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => info.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => info.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php31A.tmp
+                    [error] => 0
+                    [size] => 2144
+                )
+
+        )
+
+)
+
+---
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:43 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => info-big.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => info-big.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php31B.tmp
+                    [error] => 0
+                    [size] => 14649
+                )
+
+        )
+
+)
+
+---
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:43 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => log.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => log.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php31C.tmp
+                    [error] => 0
+                    [size] => 2224
+                )
+
+        )
+
+)
+
+---
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:43 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => log-big.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => log-big.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php31D.tmp
+                    [error] => 0
+                    [size] => 14273
+                )
+
+        )
+
+)
+
+---
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:44 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => Special.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => Special.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php31E.tmp
+                    [error] => 0
+                    [size] => 2055
+                )
+
+        )
+
+)
+
+---
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:44 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => Special-big.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => Special-big.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php31F.tmp
+                    [error] => 0
+                    [size] => 17440
+                )
+
+        )
+
+)
+
+---
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:45 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => template.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => template.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php320.tmp
+                    [error] => 0
+                    [size] => 2137
+                )
+
+        )
+
+)
+
+---
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:45 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => template-big.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => template-big.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php321.tmp
+                    [error] => 0
+                    [size] => 8115
+                )
+
+        )
+
+)
+
+---
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:46 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => UserGroup.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => UserGroup.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php322.tmp
+                    [error] => 0
+                    [size] => 1923
+                )
+
+        )
+
+)
+
+---
+Array
+(
+    [time] => Fri, 21 Aug 2009 06:02:46 +0000
+    [addr] => ******ne
+    [agent] => Shockwave Flash
+    [get] => Array
+        (
+            [parentid] => 1
+        )
+
+    [post] => Array
+        (
+            [Filename] => UserGroup-big.gif
+            [Upload] => Submit Query
+        )
+
+    [files] => Array
+        (
+            [Filedata] => Array
+                (
+                    [name] => UserGroup-big.gif
+                    [type] => application/octet-stream
+                    [tmp_name] => D:\temp\php323.tmp
+                    [error] => 0
+                    [size] => 21288
+                )
+
+        )
+
+)
+
+---

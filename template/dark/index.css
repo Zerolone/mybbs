@@ -1,0 +1,104 @@
+/* CSS Document */
+body {	background: #34353B;	color: #BEBA97;	font: 12px Tahoma;	margin: 0px;	padding: 0px;	scrollbar-base-color: #252525; 	scrollbar-arrow-color: #252525;}
+td {FONT-SIZE: 12px;}
+textarea,input,select{	background-color: #191B21;	color: #FFFFFF;	font: 12px Tahoma;	border-top: 1px solid #000000;	border-right: 1px solid #000000;	border-left: 1px solid #000000;	border-bottom: 1px solid #000000;}
+div.quote{margin:5px 20px;border:1px solid #CCCCCC;padding:5px;background:#F3F3F3 ;line-height : normal;}
+a:link{	color: #BEBA97;TEXT-DECORATION: none;}
+a:visited{	color: #BEBA97;TEXT-DECORATION: none;}
+a:hover, a:active{	color: #FFC600;}
+.banner{background: #000000;}
+.head {	background: #1C1C1F repeat-x top left;	color: #BEBA97;	font: bold 12px ;padding: 5px;}
+.ahead {background: #191B21 repeat-x top left;	color: #BEBA97;	font: bold 12px ;padding: 1px;}
+.head a:link{	color: #BEBA97;	text-decoration: none;}
+.head a:visited{	color: #BEBA97;	text-decoration: none;}
+.head a:hover,.head a:active{	color: #ffc600;	text-decoration: underline;}
+img  {	border:0;} 
+.cbg {	background: #363636 repeat-x top left;	color: #BEBA97;	font: bold 12px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;}
+.cbg a{	color: #BEBA97;}
+.f_one {	background-color: #424242;	color: #BEBA97;	border-top: 1px solid #504F4F;	border-left: 1px solid #504F4F;}
+.f_two {	background-color: #363636;	color: #BEBA97;	border-top: 1px solid #504F4F;	border-left: 1px solid #504F4F;}
+.t_one  {	background-color: #424242;	color: #BEBA97;	border-top: 1px solid #504F4F;	border-left: 1px solid #504F4F;}
+.t_two {	background-color: #363636;	color: #BEBA97;	border-top: 1px solid #504F4F;	border-left: 1px solid #504F4F;}
+.r_one {background: #353735;}
+.r_two  {	background-color: #424242;	color: #BEBA97;	border-top: 1px solid #504F4F;	border-left: 1px solid #504F4F;}
+.hr  {border-top: 1px solid #1F1F1F; border-bottom: 0; border-left: 0; border-right: 0; }
+.menu { color: #FFA406;}
+.menu A { color: #FFA406; TEXT-DECORATION: none;}
+.menu A:hover { color: #F9F5DA; TEXT-DECORATION: none;}
+.smalltxt {font-family: Tahoma, Verdana; font-size: 12px;color: #BEBA97;}
+.info {padding-left: 1px;padding-right: 0px;padding-top: 3px;padding-bottom: 3px;background-color: #262525;border-top: 1px solid #0C0C0C;border-right: 1px solid #000000;border-left: 1px solid #0C0C0C;border-bottom: 1px solid #000000;margin-bottom: 1px;}
+.smallfont {font-family: Tahoma, Verdana; font-size: 11px;color: #BEBA97;}
+.cfont { color:#FFFFFF; }
+.fnamecolor { color:#003366;}
+.index_font{color: #BEBA97;background-color:#363636; font-weight:bold;padding: 5px;}
+.tpc_title { font-size: 12px;font-weight:bold;}
+.tpc_content { font-size: 12px;}
+.i_table {border-right: 2px solid #000000;border-left: 2px solid #000000;border-bottom: 1px solid #000000;}
+
+/* Logo */
+#logo { background:url(images/logo.gif) no-repeat 0 0;	width:100px;	height:40px;cursor:hand;}
+
+/* 导航 */
+#nav { background:url(images/home.gif) no-repeat 5 50%;	text-indent:20px;}
+
+/* 论坛首页 */
+.forumnew{  background:url(images/forum/new.gif) no-repeat 50% 50%;}
+.forumold{	background:url(images/forum/old.gif) no-repeat 50% 50%;}
+.forumnew, .forumold{	background-color:#363636;	cursor:hand;}
+.user{	background:url(images/user.gif) no-repeat 50% 50%;	background-color:#363636;}
+
+/* 公告列表 */
+.topicnotice1{  background:url(images/topic/notice1.gif)   no-repeat 50% 50%; background-color:#363636;}
+.topicnotice2{  background:url(images/topic/notice2.gif)   no-repeat 50% 50%; background-color:#363636;}
+
+/* 帖子列表 */
+.topictop1{ background:url(images/topic/top1.gif)  no-repeat 50% 50%;}
+.topictop2{	background:url(images/topic/top2.gif)  no-repeat 50% 50%;}
+.topictop3{	background:url(images/topic/top3.gif)  no-repeat 50% 50%;}
+.topicnew1{	background:url(images/topic/new1.gif)  no-repeat 50% 50%; width:18px; height:12px;}
+.topichot1{	background:url(images/topic/hot1.gif)  no-repeat 50% 50%; width:16px; height:13px;}
+.topicadd{  background:url(images/topic/img.gif)   no-repeat 50% 50%; width:21px; height:16px;}
+.topictop1, .topictop2, .topictop3, .topicnew1, .topichot1 ,.topicadd{background-color:#363636;}
+
+/* 贴子的4个状态 */
+.topicnew{  background:url(images/topic/new.gif)   no-repeat 50% 50%;}
+.topic{     background:url(images/topic/topic.gif) no-repeat 50% 50%;}
+.topichot{  background:url(images/topic/hot.gif)   no-repeat 50% 50%;}
+.topiclock{ background:url(images/topic/lock.gif)  no-repeat 50% 50%;}
+.topicnew, .topic, .topichot, .topiclock{ background-color:#363636; width:19px; height:22px;cursor:hand;}
+
+/* 发帖，回帖 */
+#td_post,#td_reply{	width:78px;	height:24px;}
+#td_post{	background:url(images/topic/post.gif)}
+#td_reply{background:url(images/topic/reply.gif)}
+
+/* 资料 短信 编辑 QQ 签名 回顶 */
+#td_profile{background:url(images/read/profile.gif)}
+#td_message{background:url(images/read/message.gif)}
+#td_edit   {background:url(images/read/edit.gif)}
+#td_qq     {background:url(images/read/qq.gif)}
+#td_top    {background:url(images/read/top.gif) no-repeat 50% 50%;}
+#td_sign   {background:url(images/read/sign.gif); width:363px;height:16px;}
+#td_profile, #td_message, #td_edit, #td_qq, #td_top{	width:52px;	height:19px;}
+
+/* 发帖表情 */
+#e1, #e2, #e3, #e4, #e5, #e6, #e7{width:19px;height:19px;}
+#e1{background:url(images/emotion/1.gif);}
+#e2{background:url(images/emotion/2.gif);}
+#e3{background:url(images/emotion/3.gif);}
+#e4{background:url(images/emotion/4.gif);}
+#e5{background:url(images/emotion/5.gif);}
+#e6{background:url(images/emotion/6.gif);}
+#e7{background:url(images/emotion/7.gif);}
+
+/* 建议编辑器 */
+#edb, #edi, #edu, #edc, #edcode, #edimg, #edq, #edurl{width:23px;height:22px;cursor:hand;}
+#edb{background:url(images/editor/b.gif);}
+#edi{background:url(images/editor/i.gif);}
+#edu{background:url(images/editor/u.gif);}
+#edc{background:url(images/editor/c.gif);}
+#edcode{background:url(images/editor/code.gif);}
+#edimg{background:url(images/editor/img.gif);}
+#edq{background:url(images/editor/q.gif);}
+#edurl{background:url(images/editor/url.gif);}
+

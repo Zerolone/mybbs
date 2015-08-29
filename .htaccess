@@ -1,0 +1,21 @@
+RewriteEngine On
+#RewriteBase /
+
+#首页
+RewriteRule ^index.html$ index.php
+
+#帖子列表
+RewriteRule ^topic-([0-9]{0,10}).html$ topic.php?fid=$1
+RewriteRule ^topic-([0-9]{0,10})-([0-9]{0,10}).html$ topic.php?fid=$1&page=$2
+
+#帖子显示
+RewriteRule ^read-([0-9]{0,10}).html$ read.php?tid=$1
+RewriteRule ^read-([0-9]{0,10})-([0-9]{0,10}).html$ read.php?tid=$1&page=$2
+
+#文档说明也就是文章列表
+RewriteRule (.*?)/index.html html_articlelist.php?filename=$1
+
+#分页
+RewriteRule (.*?)/index_([2-9]{0,10}).html html_articlelist.php?filename=$1&pagenum=$2
+
+
